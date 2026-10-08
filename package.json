@@ -1,0 +1,25 @@
+{
+  "name": "comercial-scrapper",
+  "version": "0.1.0",
+  "description": "Scraper de comercios en Google Maps con clasificación de negocios nuevos, actividad y potencial de venta de soluciones informáticas",
+  "main": "dist/main.js",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "watch": "node scripts/build.mjs --watch",
+    "typecheck": "tsc --noEmit",
+    "start": "npm run build && electron .",
+    "test": "node scripts/build.mjs --tests && node --test \"dist-tests/**/*.test.cjs\""
+  },
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/leaflet": "^1.9.22",
+    "@types/node": "^26.6.4",
+    "electron": "^44.7.0",
+    "esbuild": "^0.28.2",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}

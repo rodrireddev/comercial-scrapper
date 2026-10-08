@@ -1,0 +1,46 @@
+:root {
+  --font: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  --bg: #0f1115;
+  --surface: #161922;
+  --surface-2: #1e222d;
+  --hover: #1b1f29;
+  --selected: #1d2a40;
+  --border: #2a2f3c;
+  --fg: #e6e8ee;
+  --muted: #8b93a7;
+  --accent: #4c8dff;
+  --accent-fg: #ffffff;
+  --accent-bg: rgba(76, 141, 255, 0.14);
+  --ok: #3ccf8e;
+  --ok-bg: rgba(60, 207, 142, 0.14);
+  --warn: #f2b84b;
+  --warn-bg: rgba(242, 184, 75, 0.14);
+  --danger: #ff6b6b;
+  --bad-bg: rgba(255, 107, 107, 0.12);
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f4f5f8;
+    --surface: #ffffff;
+    --surface-2: #eef0f4;
+    --hover: #f6f8fc;
+    --selected: #e5eeff;
+    --border: #dde1e8;
+    --fg: #1a1d24;
+    --muted: #646c7e;
+    --accent: #2563eb;
+    --accent-bg: rgba(37, 99, 235, 0.1);
+    --ok: #138a55;
+    --ok-bg: rgba(19, 138, 85, 0.1);
+    --warn: #a86a00;
+    --warn-bg: rgba(168, 106, 0, 0.1);
+    --danger: #c92a2a;
+    --bad-bg: rgba(201, 42, 42, 0.08);
+    color-scheme: light;
+  }
+}
+
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--fg); font-family: var(--font); }
