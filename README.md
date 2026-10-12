@@ -1,7 +1,20 @@
 # Comercial Scrapper
 
-Aplicación de escritorio (Electron + TypeScript + Web Components) para encontrar comercios en Google Maps por zona y
-clasificarlos como **prospectos para venta de soluciones informáticas**.
+Aplicación de escritorio (Electron + TypeScript + Web Components) que **releva comercios por zona en Google Maps y los
+clasifica automáticamente como prospectos** para la venta de soluciones informáticas. Convierte un trabajo manual
+(recorrer mapas, mirar reseñas, anotar en una planilla) en un listado priorizado y exportable.
+
+## Qué resuelve
+
+- **Relevamiento por zona**: dibujás un área en el mapa, se divide en celdas y se busca por celda y rubro, descartando
+  lo que cae fuera del área.
+- **Clasificación con reglas explicables**: cada negocio recibe un puntaje de 0 a 100 con los motivos y las
+  oportunidades de venta, no una caja negra.
+- **Seguimiento en el tiempo**: al re-escanear la misma zona detecta negocios nuevos y reseñas nuevas contra el
+  historial.
+- **Salida lista para usar**: filtros, estado comercial, notas y exportación a CSV que abre directo en Excel.
+
+## Cómo clasifica
 
 Para cada negocio determina:
 
@@ -11,6 +24,13 @@ Para cada negocio determina:
 - **Potencial como cliente (0–100)**: falta de sitio web (o una "web" que es Instagram/Facebook/Wix), rubro prioritario,
   actividad, tamaño PyME, negocio nuevo y dolores mencionados en reseñas (turnos, pedidos, pagos con tarjeta,
   facturación, demoras, no atienden el teléfono, stock…). Cada puntaje muestra sus motivos y las oportunidades de venta.
+
+## Alcance y adaptación a otros relevamientos
+
+Hoy la herramienta releva **comercios y sus reseñas** (no propiedades ni precios). La arquitectura separa la fuente
+de datos (`scraper/`), las reglas (`classifier.ts`) y el escaneo por zonas y celdas (`scanner.ts`, `grid.ts`), de modo
+que el mismo esquema puede apuntarse a otras fuentes, por ejemplo portales de avisos para relevar precios por zona.
+Esa adaptación **no está implementada** en este repositorio.
 
 ## Uso
 
