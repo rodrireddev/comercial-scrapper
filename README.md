@@ -14,6 +14,16 @@ clasifica automáticamente como prospectos** para la venta de soluciones inform�
   historial.
 - **Salida lista para usar**: filtros, estado comercial, notas y exportación a CSV que abre directo en Excel.
 
+## Capturas
+
+| Negocios priorizados | Detalle con motivos del puntaje |
+| --- | --- |
+| ![Listado de negocios con puntaje, señales y filtros](docs/capturas/negocios.png) | ![Detalle de un negocio con oportunidades de venta y motivos](docs/capturas/detalle.png) |
+
+| Nuevo escaneo | Marcar la zona en el mapa |
+| --- | --- |
+| ![Panel de escaneo con zonas, rubros e historial](docs/capturas/escanear.png) | ![Mapa para delimitar el área a relevar](docs/capturas/mapa-zona.png) |
+
 ## Cómo clasifica
 
 Para cada negocio determina:
@@ -31,6 +41,11 @@ Hoy la herramienta releva **comercios y sus reseñas** (no propiedades ni precio
 de datos (`scraper/`), las reglas (`classifier.ts`) y el escaneo por zonas y celdas (`scanner.ts`, `grid.ts`), de modo
 que el mismo esquema puede apuntarse a otras fuentes, por ejemplo portales de avisos para relevar precios por zona.
 Esa adaptación **no está implementada** en este repositorio.
+
+## Pendiente de implementar
+
+- **Resolución de captcha (anticaptcha)**: hoy, ante un captcha de Google el escaneo se detiene y se conserva lo ya
+  analizado. Falta automatizar ese paso para poder correr relevamientos largos sin intervención.
 
 ## Uso
 
